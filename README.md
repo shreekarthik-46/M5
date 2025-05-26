@@ -11,18 +11,27 @@ Write a C program to convert a 23.65 into 25 using pointer
 ## PROGRAM:
 ```
 #include <stdio.h>
-int main() {
-    float num = 23.65;
-    float *ptr = &num;
-    printf("Original number: %.2f\n", *ptr);
-    *ptr = 25.0;
-    printf("Modified number: %.2f\n", *ptr);
-    return 0;
+
+int main() { float num = 23.65; float *ptr = #
+
+// Output original value
+printf("Original value: %.2f\n", num);
+
+// Modify value using pointer
+*ptr = 25;
+
+// Output modified value
+printf("Modified value: %.2f\n", num);
+
+return 0;
 }
+
+
 ```
 
 ## OUTPUT:
-![Screenshot 2025-04-29 000307](https://github.com/user-attachments/assets/95e51971-8923-40bf-9673-64181cddca3f)
+![Screenshot 2025-05-26 083953](https://github.com/user-attachments/assets/d2533c51-51d5-4e92-9ce0-eceb70f7cfce)
+
 
 
  	
@@ -156,33 +165,35 @@ Write C program for the below pyramid string pattern. Enter a string: PROGRAM En
 
 ## PROGRAM:
 ```
-#include <stdio.h>
-#include <string.h>
-int main() {
-    char str[100];
-    int num_rows, i, j, midpoint, len;
-    scanf("%s", str);
-    scanf("%d", &num_rows);
-    len = strlen(str);
-    midpoint = (2 * num_rows - 1) / 2;
-    for(i = 1; i <= num_rows; i++) {
-        for(j = 1; j <= num_rows - i; j++) {
-            printf(" ");
-        }
-        for(j = 0; j < len; j++) {
-            printf("%c ", str[j]);
-        }
-        printf("\n");
+#include <stdio.h> #include <string.h>
+
+int main() { char str[100]; int rows;
+
+// Input string
+printf("Enter a string: ");
+scanf("%s", str);
+
+// Input number of rows
+printf("Enter number of rows: ");
+scanf("%d", &rows);
+
+// Print the pyramid pattern
+for (int i = 1; i <= rows; i++) {
+    for (int j = 0; j < i; j++) {
+        printf("%s ", str);
     }
-    return 0;
+    printf("\n");
+}
+
+return 0;
 }
 ```
 
  ## OUTPUT
- ![Screenshot 2025-04-29 000612](https://github.com/user-attachments/assets/8cbe86a1-68ba-4bfc-b8dc-f5d4d89031b4)
 
 
  
+![Screenshot 2025-05-26 083734](https://github.com/user-attachments/assets/974c81cc-6e2b-4724-8081-b7d3437c5125)
 
 ## RESULT
 
